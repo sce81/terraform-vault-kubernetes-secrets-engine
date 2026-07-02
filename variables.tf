@@ -25,7 +25,8 @@ variable "kubernetes_ca_cert" {
   type = string
 }
 variable "token" {
-  type = string
+  type      = string
+  sensitive = true
 }
 variable "disable_local_ca_jwt" {
   type    = bool
