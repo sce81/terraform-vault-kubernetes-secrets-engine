@@ -11,7 +11,7 @@ resource "vault_kubernetes_secret_backend" "config" {
 }
 
 resource "vault_kubernetes_secret_backend_role" "role" {
-  namespace                 = var.namespace
+  namespace                     = var.namespace
   backend                       = vault_kubernetes_secret_backend.config.path
   name                          = "service-account-${var.namespace}-role"
   allowed_kubernetes_namespaces = [var.namespace]
